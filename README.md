@@ -1,35 +1,88 @@
 # Screenshot and Crawl site content
 
-### Screenshot
+### Screenshot Feature
 
 #### Test it out
 Go to [https://www.earthr.co/team](https://www.earthr.co/team)
 
 Press Screenshot then try the following
 
-```
-.teammembers // a screenshot of all team members
-.teammemberimage // screenshots of individual team member memojis
-.teammemberimagebox // screenshots of individual team member with surrounding background
+`.teammembers`, result: `a screenshot of all team members`
+`.teammemberimage`, result: `screenshots of individual team member memojis`
+`.teammemberimagebox`, result `screenshots of individual team member with surrounding background`
 
-.teammember => name::.teammembername|position::.teammemberposition
-.teammember => color::.teammemberimagebox::backgroundColor|image::img::src|name::.teammembername|position::.teammemberposition
-```
+----
 
-### Crawler
+### Crawler Feature
 
-#### Text data
+#### Test it out
+
 Go to [https://www.earthr.co/team](https://www.earthr.co/team)
 
 Press Crawl then try the following
 
+#### Simple Text
+
+**Query**: `.teammembername`, 
+
+**Result**:
 ```
-.teammembername // a screenshot of all team members
-.teammemberimage img::src // links team member memojis
+Eren
+Ayda
+Gurkan
+
+...
+
+```
+
+**Query**: `.teammemberimage img:first-child::src`, 
+
+**Result**:
+```
+https://assets.website-files.com/5fb9a7bda8f88a1d771d5dc2/61c23e36496d5db54e52cd69_TEAM%20(14).png
+https://assets.website-files.com/5fb9a7bda8f88a1d771d5dc2/61c23dd69a63fcc73c3de028_TEAM%20(13).png
+https://assets.website-files.com/5fb9a7bda8f88a1d771d5dc2/61c23e367adee10fa2cb7b5b_TEAM%20(15).png
+
+...
+
 ```
 
 ### JSON
+
+**Query**: `.teammember => name::.teammembername|position::.teammemberposition`, 
+
+**Result**:
+```json
+[
+	{
+		"name": "Eren",
+		"position": "Co-founder & Dev Lead"
+	},
+	{
+		"name": "Ayda",
+		"position": "Co-founder & Design Lead"
+	},
+    ...
+]
 ```
-.teammember => name::.teammembername|position::.teammemberposition // json of team member name and position
-.teammember => color::.teammemberimagebox::backgroundColor|image::img::src|name::.teammembername|position::.teammemberposition // json of team member image background color, image link, name and position
+
+**Query**: `.teammember => color::.teammemberimagebox::backgroundColor|image::img::src|name::.teammembername|position::.teammemberposition`, 
+
+**Result**:
+```json
+[
+	{
+		"color": "rgb(238, 245, 252)",
+		"image": "https://assets.website-files.com/5fb9a7bda8f88a1d771d5dc2/61c23e36496d5db54e52cd69_TEAM%20(14).png",
+		"name": "Eren",
+		"position": "Co-founder & Dev Lead"
+	},
+	{
+		"color": "rgb(255, 237, 229)",
+		"image": "https://assets.website-files.com/5fb9a7bda8f88a1d771d5dc2/61c23dd69a63fcc73c3de028_TEAM%20(13).png",
+		"name": "Ayda",
+		"position": "Co-founder & Design Lead"
+	},
+    ...
+]
 ```
