@@ -35,7 +35,7 @@ async function crawl(matcher){
         }
     }
     else{
-        const [matcherQuery, attribute = "innerText"] = child.split("::");
+        const [matcherQuery, attribute = "innerText"] = matcher.split("::");
         const matchedItems = Array.from(document.querySelectorAll(matcherQuery.trim())).map(node => {
             return node[attribute] || getComputedStyle(node)[attribute];
         });
