@@ -7,6 +7,12 @@
 async function takeScreenshots(matcher){
     document.querySelectorAll(matcher).forEach(async node => {
         const dataUrl = await domtoimage.toPng(node, { "cacheBust":true });
+
+        node.classList.remove("screenshot");
+        setTimeout(() => {
+            node.classList.add("screenshot");
+        });
+
         download(dataUrl, 'download.png');
     });
 }

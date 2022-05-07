@@ -28,3 +28,17 @@
     background: transparent;
     color: #333;
 }
+
+.screenshot{
+    animation: screenshot 0.3s ease-in-out;
+}
+
+@keyframes screenshot{
+    from, to{
+        transform: none;
+    }
+
+    50%{
+        transform: scale(1.1);
+    }
+}
