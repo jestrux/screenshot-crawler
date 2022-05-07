@@ -23,7 +23,10 @@ Press Crawl then try the following
 
 #### Simple Text
 
-**Query**: `.teammembername`, 
+**Query**: 
+```
+.teammembername
+```
 
 **Result**:
 ```
@@ -35,7 +38,10 @@ Gurkan
 
 ```
 
-**Query**: `.teammemberimage img:first-child::src`, 
+**Query**: 
+```
+.teammemberimage img:first-child::src
+```
 
 **Result**:
 ```
@@ -49,7 +55,10 @@ https://assets.website-files.com/5fb9a7bda8f88a1d771d5dc2/61c23e367adee10fa2cb7b
 
 ### JSON
 
-**Query**: `.teammember => name::.teammembername|position::.teammemberposition`, 
+**Query**: 
+```
+.teammember => name::.teammembername|position::.teammemberposition
+```
 
 **Result**:
 ```json
@@ -66,7 +75,10 @@ https://assets.website-files.com/5fb9a7bda8f88a1d771d5dc2/61c23e367adee10fa2cb7b
 ]
 ```
 
-**Query**: `.teammember => color::.teammemberimagebox::backgroundColor|image::img::src|name::.teammembername|position::.teammemberposition`, 
+**Query**: 
+```
+.teammember => color::.teammemberimagebox::backgroundColor|image::img::src|name
+```:.teammembername|position::.teammemberposition`
 
 **Result**:
 ```json
