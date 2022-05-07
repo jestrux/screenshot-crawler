@@ -1,0 +1,30 @@
+.crawler-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 9999;
+}
+
+.crawler-buttons button{
+    background: #333;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+
+    display: inline-flex;
+    align-items: center;
+}
+
+.crawler-buttons button:last-of-type{
+    background: transparent;
+    color: #333;
+}
