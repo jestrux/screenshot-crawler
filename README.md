@@ -7,9 +7,20 @@ Go to [https://www.earthr.co/team](https://www.earthr.co/team)
 
 Press Screenshot then try the following
 
-`.teammembers`, result: `a screenshot of all team members`
-`.teammemberimage`, result: `screenshots of individual team member memojis`
-`.teammemberimagebox`, result `screenshots of individual team member with surrounding background`
+```
+.teammembers
+```
+Result: A screenshot of all team members.
+
+```
+.teammemberimage
+``` 
+Result: Screenshots of individual team member memojis.
+
+```
+.teammemberimagebox
+```
+Result: Screenshots of individual team member with surrounding background.
 
 ----
 
