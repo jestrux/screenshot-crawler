@@ -88,7 +88,7 @@ https://assets.website-files.com/5fb9a7bda8f88a1d771d5dc2/61c23e367adee10fa2cb7b
 
 **Query**: 
 ```
-.teammember => color::.teammemberimagebox::backgroundColor|image::img::src|name:.teammembername|position::.teammemberposition
+.teammember => color::.teammemberimagebox::backgroundColor|image::img::src|name::.teammembername|position::.teammemberposition
 ```
 
 **Result**:
