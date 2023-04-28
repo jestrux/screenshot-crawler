@@ -1,8 +1,21 @@
 # Screenshot and Crawl site content
 
+
+### Demo
+
+https://user-images.githubusercontent.com/8426172/235136704-2f789207-c3a8-4111-b022-e2ec7a1b03cb.mp4
+
 ### Screenshot Feature
 
 #### Test it out
+
+- Clone this repo
+
+- Turn on developer mode in your extensions
+
+- Drag and drop the downloaded folder to your extensions
+
+
 Go to [https://www.earthr.co/team](https://www.earthr.co/team)
 
 Press Screenshot then try the following
